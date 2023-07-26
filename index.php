@@ -4,7 +4,7 @@ $apiKey = '';
 $currentDate = date(DATE_RFC3339);
 $currentDateUrl = urlencode($currentDate);
 
-$plain_json = file_get_contents("https://www.googleapis.com/calendar/v3/calendars/vv0bmmltcm84p69ltm4jr5ivmo@group.calendar.google.com/events?key=$apiKey&timeMin=$currentDateUrl&orderBy=startTime&singleEvents=true");
+$plain_json = file_get_contents("https://www.googleapis.com/calendar/v3/calendars/vv0bmmltcm84p69ltm4jr5ivmo@group.calendar.google.com/events?key=$apiKey&timeMin=$currentDateUrl&orderBy=startTime&singleEvents=true&maxResults=15");
 $calendar_json = json_decode($plain_json, false, 5);
 
 ?>
